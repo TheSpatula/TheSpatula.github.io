@@ -32,11 +32,12 @@ body {
 .hero p {
   color: #b5b5c8;
   max-width: 500px;
+  margin-bottom: 20px; /* spacing between hero text and next section */
 }
 
 /* ABOUT */
 .about {
-  margin-top: 40px;
+  margin-top: 20px; /* reduce from 40px to 20px for desktop */
 }
 
 .about h2 {
@@ -119,7 +120,7 @@ footer {
 
 /* INSTRUCTIONS */
 .instructions {
-  margin-top: 20px;
+  margin-top: 12px; /* slightly smaller margin above instructions */
   padding-left: 0;
   line-height: 1.6;
 }
@@ -134,10 +135,10 @@ footer {
   display: block;
 }
 
-/* STEP TITLE ONLY: direct child strong of li */
+/* STEP TITLE ONLY */
 .instructions li > strong {
   color: #ff914d;
-  display: block; /* title above paragraph */
+  display: block;
   margin-bottom: 8px;
   font-weight: 700;
   font-size: 1rem;
@@ -154,7 +155,7 @@ footer {
 .instructions li p strong {
   font-weight: 600;
   color: #ff914d;
-  display: inline; /* ensures it stays in the same line */
+  display: inline; /* stays inline for 2 hours, 24 hours, etc. */
 }
 
 /* 📱 MOBILE */
@@ -175,6 +176,7 @@ footer {
   /* Move about section below the app */
   .about {
     order: 2;
+    margin-top: 40px; /* more spacing on mobile */
   }
 
   .app {
