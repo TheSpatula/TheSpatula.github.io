@@ -134,7 +134,7 @@ footer {
   display: block;
 }
 
-/* Only style the strong that is the first child of li (step title) */
+/* STEP TITLES ONLY */
 .instructions li > strong {
   color: #ff914d;
   display: block; /* step title above paragraph */
@@ -143,17 +143,18 @@ footer {
   font-size: 1rem;
 }
 
+/* INLINE STRONG INSIDE PARAGRAPH (like "2 hours") */
+.instructions li p strong {
+  font-weight: 600;
+  color: #ff914d;
+  display: inline;
+}
+
+/* PARAGRAPH */
 .instructions li p {
   margin: 0;
   color: #eaeaf0;
   padding-left: 0;
-}
-
-.instructions li p strong {
-  /* keep inline strong inside paragraph normal */
-  font-weight: 600;
-  color: #ff914d; /* optional, matches highlighting */
-  display: inline;
 }
 
 /* 📱 MOBILE */
