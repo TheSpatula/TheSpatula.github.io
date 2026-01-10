@@ -1,35 +1,54 @@
-/* Reset */
+/* RESET */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* Background */
+/* BASE */
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   background: linear-gradient(180deg, #0f0f14, #1a1a24);
   color: #eaeaf0;
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  padding: 20px;
 }
 
-/* App container */
+/* LAYOUT */
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* HERO */
+.hero h1 {
+  font-size: 2.2rem;
+  margin-bottom: 16px;
+}
+
+.hero p {
+  color: #b5b5c8;
+  max-width: 500px;
+}
+
+/* ABOUT */
+.about {
+  margin-top: 40px;
+}
+
+.about h2 {
+  margin-bottom: 10px;
+}
+
+/* APP */
 .app {
   width: 100%;
-  max-width: 420px;
 }
 
-/* Title */
-h1 {
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 1.8rem;
-}
-
-/* Cards */
+/* CARD */
 .card {
   background: #1f1f2e;
   border-radius: 16px;
@@ -38,7 +57,7 @@ h1 {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
-/* Input */
+/* INPUT */
 label {
   font-size: 0.9rem;
   color: #b5b5c8;
@@ -56,7 +75,7 @@ input {
   color: white;
 }
 
-/* Button */
+/* BUTTON */
 button {
   margin-top: 16px;
   width: 100%;
@@ -68,20 +87,13 @@ button {
   cursor: pointer;
   background: linear-gradient(135deg, #ff4d4d, #ff914d);
   color: #111;
-  transition: transform 0.1s ease, opacity 0.1s ease;
 }
 
 button:active {
   transform: scale(0.97);
-  opacity: 0.9;
 }
 
-/* Ingredients list */
-h2 {
-  margin-bottom: 12px;
-  font-size: 1.2rem;
-}
-
+/* INGREDIENTS */
 ul {
   list-style: none;
 }
@@ -91,37 +103,32 @@ li {
   justify-content: space-between;
   padding: 10px 0;
   border-bottom: 1px solid #2f2f44;
-  font-size: 0.95rem;
 }
 
-li:last-child {
-  border-bottom: none;
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #888;
 }
 
-/* Hidden */
+/* HIDDEN */
 .hidden {
   display: none;
 }
 
-@media (max-width: 600px) {
-  h1 {
-    font-size: 1.6rem;
-    text-align: center;
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
   }
 
   .hero {
-    padding: 30px 20px;
-  }
-
-  .card {
-    margin: 20px auto;
-    width: 100%;
-  }
-
-  .about {
-    margin-top: 40px;
     text-align: center;
   }
-}
 
-/* end */
+  .hero p {
+    margin: 0 auto;
+  }
+}
