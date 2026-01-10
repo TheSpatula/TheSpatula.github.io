@@ -136,13 +136,16 @@ footer {
 
 .instructions li strong {
   color: #ff914d;
-  display: block;
+  display: block; /* ensures the step title is above the paragraph */
   margin-bottom: 8px;
+  font-weight: 700;
+  font-size: 1rem;
 }
 
 .instructions li p {
   margin: 0;
   color: #eaeaf0;
+  padding-left: 0;
 }
 
 /* 📱 MOBILE */
