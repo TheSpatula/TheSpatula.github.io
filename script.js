@@ -22,3 +22,5 @@ function calculate() {
 
   document.getElementById("result").classList.remove("hidden");
 }
+
+/* end */
