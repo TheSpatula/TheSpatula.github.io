@@ -134,27 +134,27 @@ footer {
   display: block;
 }
 
-/* STEP TITLES ONLY */
+/* STEP TITLE ONLY: direct child strong of li */
 .instructions li > strong {
   color: #ff914d;
-  display: block; /* step title above paragraph */
+  display: block; /* title above paragraph */
   margin-bottom: 8px;
   font-weight: 700;
   font-size: 1rem;
-}
-
-/* INLINE STRONG INSIDE PARAGRAPH (like "2 hours") */
-.instructions li p strong {
-  font-weight: 600;
-  color: #ff914d;
-  display: inline;
 }
 
 /* PARAGRAPH */
 .instructions li p {
   margin: 0;
   color: #eaeaf0;
-  padding-left: 0;
+  line-height: 1.5;
+}
+
+/* INLINE STRONG INSIDE PARAGRAPH */
+.instructions li p strong {
+  font-weight: 600;
+  color: #ff914d;
+  display: inline; /* ensures it stays in the same line */
 }
 
 /* 📱 MOBILE */
