@@ -2,10 +2,12 @@ function calculate() {
   const pizzas = Number(document.getElementById("pizzas").value);
 
   const ingredients = [
-    { name: "Flour", value: pizzas * 100, unit: "g" },
-    { name: "Water", value: pizzas * 60, unit: "g" },
-    { name: "Salt", value: pizzas * 2, unit: "g" },
-    { name: "Yeast", value: pizzas * 1, unit: "g" }
+    { name: "Durum wheat semolina", value: pizzas * 50, unit: "g" },
+    { name: "Pizza flour", value: pizzas * 135, unit: "g" },
+    { name: "Water", value: pizzas * 110, unit: "ml" },
+    { name: "Olive oil", value: pizzas * 12, unit: "ml" },
+    { name: "Salt", value: pizzas * 3.5, unit: "g" },
+    { name: "Yeast", value: pizzas * 2.5, unit: "g" }
   ];
 
   const list = document.getElementById("ingredients");
@@ -15,7 +17,7 @@ function calculate() {
     const li = document.createElement("li");
     li.innerHTML = `
       <span>${item.name}</span>
-      <span>${item.value} ${item.unit}</span>
+      <span>${item.value % 1 === 0 ? item.value : item.value.toFixed(1)} ${item.unit}</span>
     `;
     list.appendChild(li);
   });

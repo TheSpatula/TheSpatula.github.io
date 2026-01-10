@@ -132,3 +132,31 @@ footer {
     margin: 0 auto;
   }
 }
+
+/* INSTRUCTIONS */
+.instructions {
+  margin-top: 20px;
+  padding-left: 20px;
+  line-height: 1.6;
+}
+
+.instructions li {
+  margin-bottom: 16px;
+  background: #1f1f2e;
+  padding: 14px 16px;
+  border-radius: 12px;
+  list-style-position: inside;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+.instructions li strong {
+  color: #ff914d; /* highlights the starred bold parts */
+}
+
+/* RESPONSIVE ADJUSTMENTS */
+@media (max-width: 768px) {
+  .instructions li {
+    padding: 12px;
+    font-size: 0.95rem;
+  }
+}
