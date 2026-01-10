@@ -134,9 +134,10 @@ footer {
   display: block;
 }
 
-.instructions li strong {
+/* Only style the strong that is the first child of li (step title) */
+.instructions li > strong {
   color: #ff914d;
-  display: block; /* ensures the step title is above the paragraph */
+  display: block; /* step title above paragraph */
   margin-bottom: 8px;
   font-weight: 700;
   font-size: 1rem;
@@ -146,6 +147,13 @@ footer {
   margin: 0;
   color: #eaeaf0;
   padding-left: 0;
+}
+
+.instructions li p strong {
+  /* keep inline strong inside paragraph normal */
+  font-weight: 600;
+  color: #ff914d; /* optional, matches highlighting */
+  display: inline;
 }
 
 /* 📱 MOBILE */
