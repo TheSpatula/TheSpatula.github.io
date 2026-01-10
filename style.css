@@ -1,43 +1,104 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Background */
 body {
-  font-family: Arial, sans-serif;
-  background: #f9f9f9;
-  padding: 40px;
-}
-
-h1 {
-  color: #d62828;
-}
-
-input, button {
-  padding: 10px;
-  margin: 10px 0;
-}
-
-#result {
-  margin-top: 20px;
-  background: white;
-  padding: 15px;
-  border-radius: 5px;
-}
-
-
-
-
-
-header {
-  background: #0077ff;
-  color: white;
-  padding: 40px;
-  text-align: center;
-}
-
-section {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: linear-gradient(180deg, #0f0f14, #1a1a24);
+  color: #eaeaf0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
   padding: 20px;
 }
 
-footer {
-  background: #222;
-  color: white;
+/* App container */
+.app {
+  width: 100%;
+  max-width: 420px;
+}
+
+/* Title */
+h1 {
   text-align: center;
-  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+/* Cards */
+.card {
+  background: #1f1f2e;
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Input */
+label {
+  font-size: 0.9rem;
+  color: #b5b5c8;
+}
+
+input {
+  width: 100%;
+  margin-top: 8px;
+  padding: 14px;
+  font-size: 1rem;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  background: #2a2a3d;
+  color: white;
+}
+
+/* Button */
+button {
+  margin-top: 16px;
+  width: 100%;
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, #ff4d4d, #ff914d);
+  color: #111;
+  transition: transform 0.1s ease, opacity 0.1s ease;
+}
+
+button:active {
+  transform: scale(0.97);
+  opacity: 0.9;
+}
+
+/* Ingredients list */
+h2 {
+  margin-bottom: 12px;
+  font-size: 1.2rem;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #2f2f44;
+  font-size: 0.95rem;
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+/* Hidden */
+.hidden {
+  display: none;
 }
