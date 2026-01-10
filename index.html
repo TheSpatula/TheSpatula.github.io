@@ -8,9 +8,24 @@
 <body>
 
   <header>
-    <h1>Welcome to BestPizza</h1>
+    <h1>Welcome to BestPizza Calculator</h1>
     <p>Here you will find the number one pizza dough recipe!</p>
   </header>
+
+  <!-- start of input -->
+
+  <label>
+    Number of pizzas:
+    <input type="number" id="pizzas" min="1" value="1">
+  </label>
+
+  <button onclick="calculate()">Calculate</button>
+
+  <div id="result"></div>
+
+  <script src="script.js"></script>
+
+  <!-- end of input -->
 
   <section>
     <h2>About Me</h2>
