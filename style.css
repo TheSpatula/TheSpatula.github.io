@@ -21,6 +21,12 @@ body {
   max-width: 1100px;
   margin: 0 auto;
   padding: 40px 20px;
+  align-items: start;
+}
+
+/* LEFT COLUMN FIX */
+.left-column {
+  grid-row: 1 / -1; /* 🔥 prevents desktop shifting */
 }
 
 /* HERO */
@@ -31,17 +37,12 @@ body {
 
 .hero p {
   color: #b5b5c8;
-  max-width: 500px;
-  margin-bottom: 20px; /* spacing between hero text and next section */
+  margin-bottom: 20px;
 }
 
 /* ABOUT */
 .about {
-  margin-top: 20px; /* reduce from 40px to 20px for desktop */
-}
-
-.about h2 {
-  margin-bottom: 10px;
+  margin-top: 20px;
 }
 
 /* APP */
@@ -55,7 +56,7 @@ body {
   border-radius: 16px;
   padding: 20px;
   margin-bottom: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
 }
 
 /* INPUT */
@@ -71,7 +72,6 @@ input {
   font-size: 1rem;
   border-radius: 12px;
   border: none;
-  outline: none;
   background: #2a2a3d;
   color: white;
 }
@@ -90,20 +90,38 @@ button {
   color: #111;
 }
 
-button:active {
-  transform: scale(0.97);
-}
-
 /* INGREDIENTS */
 ul {
   list-style: none;
 }
 
-li {
+ul li {
   display: flex;
   justify-content: space-between;
   padding: 10px 0;
   border-bottom: 1px solid #2f2f44;
+}
+
+/* INSTRUCTIONS */
+.instructions {
+  margin-top: 12px;
+}
+
+.instructions li {
+  background: #1f1f2e;
+  padding: 14px;
+  margin-bottom: 16px;
+  border-radius: 12px;
+}
+
+.instructions li > strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #ff914d;
+}
+
+.instructions li p strong {
+  display: inline;
 }
 
 /* FOOTER */
@@ -118,73 +136,13 @@ footer {
   display: none;
 }
 
-/* INSTRUCTIONS */
-.instructions {
-  margin-top: 12px; /* slightly smaller margin above instructions */
-  padding-left: 0;
-  line-height: 1.6;
-}
-
-.instructions li {
-  margin-bottom: 16px;
-  background: #1f1f2e;
-  padding: 14px 16px;
-  border-radius: 12px;
-  list-style-position: inside;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
-  display: block;
-}
-
-/* STEP TITLE ONLY */
-.instructions li > strong {
-  color: #ff914d;
-  display: block;
-  margin-bottom: 8px;
-  font-weight: 700;
-  font-size: 1rem;
-}
-
-/* PARAGRAPH */
-.instructions li p {
-  margin: 0;
-  color: #eaeaf0;
-  line-height: 1.5;
-}
-
-/* INLINE STRONG INSIDE PARAGRAPH */
-.instructions li p strong {
-  font-weight: 600;
-  color: #ff914d;
-  display: inline; /* stays inline for 2 hours, 24 hours, etc. */
-}
-
 /* 📱 MOBILE */
 @media (max-width: 768px) {
   .layout {
     grid-template-columns: 1fr;
-    gap: 24px;
   }
 
-  .hero {
-    text-align: center;
-  }
-
-  .hero p {
-    margin: 0 auto 20px auto;
-  }
-
-  /* Move about section below the app */
-  .about {
-    order: 2;
-    margin-top: 40px; /* more spacing on mobile */
-  }
-
-  .app {
-    order: 1;
-  }
-
-  .instructions li {
-    padding: 12px;
-    font-size: 0.95rem;
+  .left-column {
+    grid-row: auto;
   }
 }

@@ -10,15 +10,48 @@
 
   <main class="layout">
 
-    <!-- LEFT COLUMN -->
-    <section class="hero">
-      <h1>Welcome to BestPizza🍕 Calculator</h1>
-      <p>Here you will find the number one pizza dough recipe!</p>
+    <!-- LEFT COLUMN (fixed height on desktop) -->
+    <section class="left-column">
+      <section class="hero">
+        <h1>Welcome to BestPizza🍕 Calculator</h1>
+        <p>Here you will find the number one pizza dough recipe!</p>
+      </section>
+
+      <section class="about">
+        <h2>Pizza Dough Recipe (for a 32 cm pizza)</h2>
+        <h3>Instructions:</h3>
+
+        <ol class="instructions">
+          <li>
+            <strong>Combine ingredients</strong>
+            <p>Add all the ingredients at once: semolina, flour, water, olive oil, salt, and yeast.</p>
+          </li>
+          <li>
+            <strong>Knead the dough</strong>
+            <p>Knead by hand or with a stand mixer for about 20 minutes until smooth and elastic.</p>
+          </li>
+          <li>
+            <strong>First rise (warm spot)</strong>
+            <p>Let the dough rest in a warm spot for <strong>2 hours</strong> to activate the yeast.</p>
+          </li>
+          <li>
+            <strong>Cold fermentation (fridge)</strong>
+            <p>Place the dough in the refrigerator for <strong>24 hours</strong> for better flavor.</p>
+          </li>
+          <li>
+            <strong>Bring to room temperature</strong>
+            <p>Let the dough rest at room temperature for <strong>2 hours</strong> before baking.</p>
+          </li>
+          <li>
+            <strong>Stretch and bake</strong>
+            <p>Stretch into a <strong>32 cm pizza base</strong>, top as desired, and bake.</p>
+          </li>
+        </ol>
+      </section>
     </section>
 
     <!-- RIGHT COLUMN -->
     <section class="app">
-
       <div class="card">
         <label for="pizzas">Number of pizzas</label>
         <input type="number" id="pizzas" min="1" value="1" />
@@ -29,46 +62,11 @@
         <h2>Ingredients</h2>
         <ul id="ingredients"></ul>
       </div>
-
-    </section>
-
-    <!-- ABOUT / INSTRUCTIONS -->
-    <section class="about">
-      <h2>Pizza Dough Recipe (for a 32 cm pizza)</h2>
-      <h3>Instructions:</h3>
-      <ol class="instructions">
-        <li>
-          <strong>Combine ingredients</strong>
-          <p>Add all the ingredients at once: semolina, flour, water, olive oil, salt, and yeast.</p>
-        </li>
-        <li>
-          <strong>Knead the dough</strong>
-          <p>Knead by hand or with a stand mixer for about 20 minutes until smooth, elastic, and no longer sticky.</p>
-        </li>
-        <li>
-          <strong>First rise (warm spot)</strong>
-          <p>Cover with a clean kitchen towel or plastic wrap and let it rest in a warm spot for <strong>2 hours</strong> to allow yeast to develop flavor.</p>
-        </li>
-        <li>
-          <strong>Cold fermentation (fridge)</strong>
-          <p>After the initial rise, place the dough in the refrigerator for <strong>24 hours</strong> for slow fermentation and better texture.</p>
-        </li>
-        <li>
-          <strong>Bring to room temperature and shape</strong>
-          <p>Two hours before baking, take the dough out of the fridge. Shape it into a pizza ball (300 g) and let it rest at room temperature for <strong>2 hours</strong>.</p>
-        </li>
-        <li>
-          <strong>Stretch and bake</strong>
-          <p>Stretch or roll the dough into a <strong>32 cm pizza base</strong>. Top as desired and bake until golden and cooked through.</p>
-        </li>
-      </ol>
     </section>
 
   </main>
 
-  <footer>
-    © 2026 BestPizza🍕
-  </footer>
+  <footer>© 2026 BestPizza🍕</footer>
 
   <script src="script.js"></script>
 </body>
